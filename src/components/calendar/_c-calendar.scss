@@ -1,5 +1,7 @@
 .c-calendar {
+  overflow: auto;
   width: max-content;
+  max-width: 100%;
   padding: pad(small) pad();
   border-radius: px-to-rem(6px);
   box-shadow: 0 px-to-rem(2px) px-to-rem(23px) color-palette('gray', 200);
