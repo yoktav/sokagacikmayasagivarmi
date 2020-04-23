@@ -1,0 +1,40 @@
+.c-link {
+  position: relative;
+  color: $color-primary;
+  font-size: $g-font-size-large;
+  font-weight: 700;
+  display: inline-block;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: px-to-rem(3px);
+    background-color: $color-primary;
+    content: '';
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease, width 0.3s ease;
+  }
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &--secondary {
+    color: $color-denim;
+
+    &::after {
+      background-color: $color-denim;
+    }
+
+    &:hover {
+      color: $color-denim;
+    }
+  }
+}
