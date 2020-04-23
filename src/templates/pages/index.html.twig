@@ -133,10 +133,36 @@
       paragraph: 'Herkese <br> (İlgili kurumların belirlediği kişiler ve muafiyet belgesi olanlar dışında)',
     } only %}
 
-    {% include "@components/open-places/open-places.html.twig" with {
-      className: 'is-centered',
-      tableBodyItems: tableBodyItems,
+    <h2 class="u-color-primary u-font-weight-500">Nereler Açık?</h2>
+
+    <div class="u-overflow-auto u-max-width-100">
+      {% include "@components/open-places/open-places.html.twig" with {
+        className: 'is-centered',
+        tableBodyItems: tableBodyItems,
+      } only %}
+    </div>
+
+    {% include "@components/link/link.html.twig" with {
+      className: null,
+      href: '/',
+      text: 'www.sokagacikmayasagivarmi.com',
     } only %}
+
+    <p>
+      Konuyla ilgili bilgiyi bir türlü tek seferde bulamadım, gazeteler galerilere yönlendirdi, başka yerler yanlış bilgi verdi. vs vs. Ben de bu siteyi yaptım.
+    </p>
+
+    <p>
+      Eksik/yanlış bir şey varsa buradan ulaşabilirsiniz.
+
+      <br>
+
+      {% include "@components/link/link.html.twig" with {
+        className: 'c-link--secondary u-margin-bottom-xlarge',
+        href: 'https://twitter.com/burakdonertas',
+        text: 'twitter.com/burakdonertas',
+      } only %}
+    </p>
 
   </div>
 {% endblock %}
