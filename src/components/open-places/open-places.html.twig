@@ -1,0 +1,30 @@
+<h2 class="u-color-primary u-font-weight-500">Nereler Açık?</h2>
+
+<table class="{{html_classes('c-open-places', className)}}">
+
+  <thead>
+    <tr>
+      <th class="c-open-places__title"></th>
+      <th class="c-open-places__title">23 Nisan Perşembe</th>
+      <th class="c-open-places__title">24 Nisan Cuma</th>
+      <th class="c-open-places__title">25 Nisan Cumartesi</th>
+      <th class="c-open-places__title">26 Nisan Pazar</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for tableBodyItem in tableBodyItems %}
+      <tr>
+        <td class="c-open-places__title">{{ tableBodyItem.title }}</td>
+
+        {% for tableBodyDataItem in tableBodyItem.tableBodyDataItems %}
+          <td class="{{ html_classes('c-open-places__info', tableBodyDataItem.className) }}">{{ tableBodyDataItem.info }}</td>
+        {% endfor %}
+
+      </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+
+<p class="u-margin-bottom">? işaretli olanlar net bilgi bulunamayan ya da belli olmayanlar.</p>

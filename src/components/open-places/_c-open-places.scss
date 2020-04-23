@@ -1,0 +1,47 @@
+.c-open-places {
+  border-spacing: 0;
+  font-size: $g-font-size-medium;
+  line-height: 1;
+
+  &.is-centered {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__title,
+  &__info {
+    padding: pad(xsmall) pad(xsmall);
+    border-right: 1px solid color-palette('gray', 400);
+    border-bottom: 1px solid color-palette('gray', 400);
+    vertical-align: middle;
+  }
+
+  &__title {
+    font-weight: 700;
+
+    &:first-of-type {
+      text-align: left;
+    }
+  }
+
+  &__info {
+    color: $color-secondary;
+    font-weight: 600;
+
+    &.is-close {
+      color: $color-primary;
+    }
+  }
+
+  tbody &__title {
+    border-left: 1px solid color-palette('gray', 400);
+  }
+
+  thead &__title {
+    border-top: 1px solid color-palette('gray', 400);
+  }
+
+  thead th:first-of-type {
+    border-top: 0;
+  }
+}
