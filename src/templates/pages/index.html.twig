@@ -18,7 +18,10 @@
       text: 'YASAĞIN BİTMESİNE NE KADAR KALDI?',
       date: '2020-04-26T21:00:00+00:00',
     } only %}
-    {% include "@components/header/header.html.twig" %}
+
+    {% include "@components/header/header.html.twig" with {
+      className: 'u-margin-bottom-large',
+    } %}
 
   </div>
 {% endblock %}
