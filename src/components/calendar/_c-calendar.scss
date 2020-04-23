@@ -1,10 +1,13 @@
 .c-calendar {
   width: max-content;
   padding: pad(small) pad();
-  margin-right: auto;
-  margin-left: auto;
   border-radius: px-to-rem(6px);
   box-shadow: 0 px-to-rem(2px) px-to-rem(23px) color-palette('gray', 200);
+
+  &.is-centered {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   &__title {
     padding-left: pad(xsmall);

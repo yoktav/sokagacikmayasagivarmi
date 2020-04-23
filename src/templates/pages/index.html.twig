@@ -1,3 +1,90 @@
+{% set tableBodyItems = [
+  {
+    title: 'Marketler',
+    tableBodyDataItems: [
+      {
+        className: null,
+        info: '09:00-14:00'
+      },
+      {
+        className: null,
+        info: '09:00-14:00'
+      },
+      {
+        className: 'is-closed',
+        info: 'Kapalı'
+      },
+      {
+        className: 'is-closed',
+        info: 'Kapalı'
+      },
+    ],
+  },
+  {
+    title: 'Eczaneler',
+    tableBodyDataItems: [
+      {
+        className: null,
+        info: 'Açık <br> (Nöbetçi)'
+      },
+      {
+        className: null,
+        info: 'Açık <br> (?)'
+      },
+      {
+        className: null,
+        info: 'Açık <br> (?)'
+      },
+      {
+        className: null,
+        info: 'Açık <br> (Nöbetçi)'
+      },
+    ],
+  },
+  {
+    title: 'Fırınlar',
+    tableBodyDataItems: [
+      {
+        className: null,
+        info: 'Açık <br> (?)'
+      },
+      {
+        className: null,
+        info: 'Açık'
+      },
+      {
+        className: null,
+        info: 'Açık'
+      },
+      {
+        className: null,
+        info: '?'
+      },
+    ],
+  },
+  {
+    title: 'Akaryakıt <br> (Her 50 km için)',
+    tableBodyDataItems: [
+      {
+        className: null,
+        info: 'Açık'
+      },
+      {
+        className: null,
+        info: 'Açık'
+      },
+      {
+        className: null,
+        info: 'Açık'
+      },
+      {
+        className: null,
+        info: '?'
+      },
+    ],
+  },
+] %}
+
 {% extends "../layout.html.twig" %}
 
 {% block meta %}
@@ -44,6 +131,11 @@
       className: 'u-margin-bottom-large',
       title: 'Kimlere Yasak?',
       paragraph: 'Herkese <br> (İlgili kurumların belirlediği kişiler ve muafiyet belgesi olanlar dışında)',
+    } only %}
+
+    {% include "@components/open-places/open-places.html.twig" with {
+      className: 'is-centered',
+      tableBodyItems: tableBodyItems,
     } only %}
 
   </div>
