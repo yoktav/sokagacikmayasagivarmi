@@ -1,0 +1,12 @@
+.c-section {
+  &__title {
+    margin-bottom: 0;
+    color: $color-primary;
+    font-weight: 500;
+  }
+
+  &__paragraph {
+    margin-top: 0;
+    font-size: $g-font-size-large;
+  }
+}

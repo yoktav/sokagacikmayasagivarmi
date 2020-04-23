@@ -23,31 +23,28 @@
       className: 'u-margin-bottom-large',
     } %}
 
-    <h2 class="u-color-primary u-margin-bottom-0 u-font-weight-500">
-      Ne Zaman Yasak?
-    </h2>
-    <p class="u-margin-top-0 u-margin-bottom-large u-font-size-large">
-      23 Nisan Perşembe 00:00 ile 26 Nisan Pazar 23:59 Arasında
-    </p>
+    {% include "@components/section/section.html.twig" with {
+      className: 'u-margin-bottom-large',
+      title: 'Ne Zaman Yasak?',
+      paragraph: '23 Nisan Perşembe 00:00 ile 26 Nisan Pazar 23:59 Arasında',
+    } only %}
 
     {% include "@components/calendar/calender.html.twig" with {
       className: 'u-margin-bottom-large',
       tableTitle: 'Nisan 2020',
     } only %}
 
-    <h2 class="u-color-primary u-margin-bottom-0 u-font-weight-500">
-      Hangi İllerde Yasak?
-    </h2>
-    <p class="u-margin-top-0 u-margin-bottom-large u-font-size-large">
-      Adana, Ankara, Antalya, Aydın, Balıkesir, Bursa, Denizli, Diyarbakır, Erzurum, Eskişehir, Gaziantep, Hatay, İstanbul, İzmir, Kahramanmaraş, Kayseri, Kocaeli, Konya, Malatya, Manisa, Mardin, Mersin, Muğla, Ordu, Sakarya, Samsun, Şanlıurfa, Tekirdağ, Trabzon, Van, Zonguldak
-    </p>
+    {% include "@components/section/section.html.twig" with {
+      className: 'u-margin-bottom-large',
+      title: 'Hangi İllerde Yasak?',
+      paragraph: 'Adana, Ankara, Antalya, Aydın, Balıkesir, Bursa, Denizli, Diyarbakır, Erzurum, Eskişehir, Gaziantep, Hatay, İstanbul, İzmir, Kahramanmaraş, Kayseri, Kocaeli, Konya, Malatya, Manisa, Mardin, Mersin, Muğla, Ordu, Sakarya, Samsun, Şanlıurfa, Tekirdağ, Trabzon, Van, Zonguldak',
+    } only %}
 
-    <h2 class="u-color-primary u-margin-bottom-0 u-font-weight-500">
-      Kimlere Yasak?
-    </h2>
-    <p class="u-margin-top-0 u-margin-bottom-large u-font-size-large">
-      Herkese <br> (İlgili kurumların belirlediği kişiler ve muafiyet belgesi olanlar dışında)
-    </p>
+    {% include "@components/section/section.html.twig" with {
+      className: 'u-margin-bottom-large',
+      title: 'Kimlere Yasak?',
+      paragraph: 'Herkese <br> (İlgili kurumların belirlediği kişiler ve muafiyet belgesi olanlar dışında)',
+    } only %}
 
   </div>
 {% endblock %}
