@@ -7,6 +7,17 @@
 {% block body %}
   <div class="container u-text-align-center u-margin-top-large">
 
+    {% include "@components/counter/counter.html.twig" with {
+      className: 'u-margin-top-large',
+      text: 'YASAĞIN BAŞLAMASINA NE KADAR KALDI?',
+      date: '2020-04-22T21:00:00+00:00',
+    } only %}
+
+    {% include "@components/counter/counter.html.twig" with {
+      className: 'u-margin-top-large',
+      text: 'YASAĞIN BİTMESİNE NE KADAR KALDI?',
+      date: '2020-04-26T21:00:00+00:00',
+    } only %}
     {% include "@components/header/header.html.twig" %}
 
   </div>
