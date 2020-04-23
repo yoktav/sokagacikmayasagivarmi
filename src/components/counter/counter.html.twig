@@ -1,1 +1,4 @@
-<p class="c-counter js-counter" data-date={{ date }}></p>
+<div class="{{ html_classes('c-counter', className) }}">
+  <h3 class="c-counter__title">{{ text }}</h3>
+  <p class="c-counter__counter js-counter" data-date={{ date }}></p>
+</div>
