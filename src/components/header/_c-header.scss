@@ -1,0 +1,36 @@
+.c-header {
+  &__sup-title {
+    margin-bottom: gap(xsmall);
+    color: $color-secondary;
+    font-size: $g-font-size-large;
+    font-weight: 600;
+  }
+
+  &__title {
+    margin-bottom: gap();
+    color: $color-primary;
+  }
+
+  &__box {
+    display: none;
+    width: px-to-rem(208);
+    height: px-to-rem(96px);
+    color: $color-white;
+    font-size: $g-font-size-xlarge;
+    font-weight: 700;
+
+    &.is-active {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--green {
+      background-color: $color-secondary;
+    }
+
+    &--red {
+      background-color: $color-primary;
+    }
+  }
+}
