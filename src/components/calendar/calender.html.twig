@@ -1,0 +1,63 @@
+<div class="{{ html_classes('c-calendar', className) }}">
+  <h3 class="c-calendar__title">{{ tableTitle }}</h3>
+  <table class="c-calendar__table">
+
+    <thead>
+      <tr>
+        <th>P</th>
+        <th>S</th>
+        <th>Ç</th>
+        <th>P</th>
+        <th>C</th>
+        <th>C</th>
+        <th>P</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        {% for i in 30..31 %}
+          <td class="u-color-muted"> {{ i }} </td>
+        {% endfor %}
+        {% for i in 1..5 %}
+          <td> {{ i }} </td>
+        {% endfor %}
+      </tr>
+
+      <tr>
+        {% for i in 6..12 %}
+          <td> {{ i }} </td>
+        {% endfor %}
+      </tr>
+
+      <tr>
+        {% for i in 13..19 %}
+          <td> {{ i }} </td>
+        {% endfor %}
+      </tr>
+
+      <tr>
+        {% for i in 20..22 %}
+          <td> {{ i }} </td>
+        {% endfor %}
+
+        {% for i in 23..26 %}
+          <td class="c-calendar__curfew"> {{ i }} </td>
+        {% endfor %}
+      </tr>
+
+      <tr>
+        {% for i in 27..30 %}
+          <td> {{ i }} </td>
+        {% endfor %}
+
+        {% for i in 1..3 %}
+          <td class="u-color-muted"> {{ i }} </td>
+        {% endfor %}
+      </tr>
+
+    </tbody>
+
+  </table>
+</div>

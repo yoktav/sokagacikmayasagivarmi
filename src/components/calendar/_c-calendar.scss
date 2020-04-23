@@ -1,0 +1,45 @@
+.c-calendar {
+  width: max-content;
+  padding: pad(small) pad();
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: px-to-rem(6px);
+  box-shadow: 0 px-to-rem(2px) px-to-rem(23px) color-palette('gray', 200);
+
+  &__title {
+    padding-left: pad(xsmall);
+    color: $color-primary;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  &__table {
+    border-spacing: 0;
+    color: $color-regent-gray;
+    font-weight: 500;
+
+    th {
+      padding: pad(2xsmall) pad(xsmall);
+      color: rgba($color-pickled-bluewood, 0.54);
+    }
+
+    td {
+      padding: pad(2xsmall) pad(xsmall);
+    }
+  }
+
+  &__curfew {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:nth-of-type(4) {
+      border-bottom-left-radius: px-to-rem(50px);
+      border-top-left-radius: px-to-rem(50px);
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: px-to-rem(50px);
+      border-top-right-radius: px-to-rem(50px);
+    }
+  }
+}
